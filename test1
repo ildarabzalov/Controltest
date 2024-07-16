@@ -1,29 +1,30 @@
- {
-        string[] initial = { "ojgio23", "c2t", "123", "o", "Oooo", "go" };
+{
+    string[] initial = { "ojgio23", "c2t", "123", "o", "Oooo", "go" };
 
-        string[] threeletters = Filterthreeletters(initial);
+    string[] threeletters = Filterthreeletters(initial);
 
-        Console.WriteLine("Исходный массив строк: " + string.Join(", ", initial));
-        Console.WriteLine("Новый массив строк (длина <= 3 символа): " + string.Join(", ", threeletters));
- }
-        string[] Filterthreeletters(string[] strings)
+    Console.WriteLine("Исходный массив строк: " + string.Join(", ", initial));
+    Console.WriteLine("Новый массив строк (длина <= 3 символа): " + string.Join(", ", threeletters));
+}
+string[] Filterthreeletters(string[] strings)
+{
+    int count = 0;
+    foreach (string str in strings)
     {
-        int count = 0;
-        foreach (string str in strings)
+        if (str.Length <= 3)
         {
-            if (str.Length <= 3)
-            {
-                count++;
-            }
+            count++;
         }
-        string[] result = new string[count];
-        int index = 0;
-        foreach (string str in strings)
+    }
+    string[] result = new string[count];
+    int index = 0;
+    foreach (string str in strings)
+    {
+        if (str.Length <= 3)
         {
-            if (str.Length <= 3)
-            {
-                result[index] = str;
-                index++;
-            }
+            result[index] = str;
+            index++;
         }
-    } 
+    }
+    return result;
+}
