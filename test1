@@ -1,0 +1,8 @@
+ {
+        string[] initial = { "ojgio23", "c2t", "123", "o", "Oooo", "go" };
+
+        string[] threeletters = Filterthreeletters(initial);
+
+        Console.WriteLine("Исходный массив строк: " + string.Join(", ", initial));
+        Console.WriteLine("Новый массив строк (длина <= 3 символа): " + string.Join(", ", threeletters));
+ }
