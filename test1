@@ -6,3 +6,14 @@
         Console.WriteLine("Исходный массив строк: " + string.Join(", ", initial));
         Console.WriteLine("Новый массив строк (длина <= 3 символа): " + string.Join(", ", threeletters));
  }
+        string[] Filterthreeletters(string[] strings)
+    {
+        int count = 0;
+        foreach (string str in strings)
+        {
+            if (str.Length <= 3)
+            {
+                count++;
+            }
+        }
+    } 
